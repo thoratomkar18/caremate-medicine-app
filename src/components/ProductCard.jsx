@@ -202,6 +202,7 @@ const ProductCard = ({
               >
                 BUY
               </button>
+              {/* Force rebuild - Button should show BUY not BUY NOW */}
             )}
           </div>
         </div>
