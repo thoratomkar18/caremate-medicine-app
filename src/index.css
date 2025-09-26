@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-muted-50 text-muted-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-muted-200 hover:bg-muted-300 text-muted-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-muted-500 focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-muted-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-muted-200 p-4;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-md transition-shadow duration-200 cursor-pointer;
+  }
+}
+
+/* Emergency button styles to ensure buttons are always visible */
+button[type="submit"], button[type="button"] {
+  min-height: 44px !important;
+  min-width: 100px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+}
+
+button[type="submit"] {
+  background-color: #2563eb !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px !important;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8 !important;
+}
+
+button[type="submit"]:disabled {
+  background-color: #94a3b8 !important;
+  cursor: not-allowed !important;
+}
+
+/* CHECKOUT PAGE SPECIFIC - Force visibility of place order button */
+#checkout-place-order-btn {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: white !important;
+  border: 2px solid #059669 !important;
+  border-radius: 12px !important;
+  padding: 18px 32px !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  min-height: 64px !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  margin: 16px 0 !important;
+}
+
+#checkout-place-order-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857) !important;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+#checkout-place-order-btn:active {
+  transform: translateY(0px) !important;
+}
+
+#checkout-place-order-btn:disabled {
+  background: #9ca3af !important;
+  border-color: #9ca3af !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* Emergency styles for product card buttons */
+.card button, [class*="card"] button {
+  min-height: 32px !important;
+  min-width: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+}
+
+/* Shopping cart button */
+.card button[disabled] {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}

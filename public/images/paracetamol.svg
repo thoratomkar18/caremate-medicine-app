@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#FF7675"/>
+  <rect x="60" y="70" width="80" height="80" rx="8" fill="white" opacity="0.95"/>
+  <rect x="70" y="80" width="60" height="18" rx="3" fill="#E17055"/>
+  <text x="100" y="92" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">PARACETAMOL</text>
+  <ellipse cx="85" cy="115" rx="8" ry="12" fill="#FF7675" opacity="0.8"/>
+  <ellipse cx="100" cy="115" rx="8" ry="12" fill="#FF7675" opacity="0.8"/>
+  <ellipse cx="115" cy="115" rx="8" ry="12" fill="#FF7675" opacity="0.8"/>
+  <text x="100" y="138" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#333">500mg</text>
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">PAIN RELIEF</text>
+</svg>

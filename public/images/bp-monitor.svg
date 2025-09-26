@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#74B9FF"/>
+  <rect x="70" y="70" width="60" height="40" rx="5" fill="white" opacity="0.95"/>
+  <rect x="75" y="75" width="50" height="15" fill="#333" opacity="0.9"/>
+  <text x="100" y="85" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#00B894">120/80</text>
+  <rect x="75" y="95" width="50" height="10" rx="2" fill="#E17055"/>
+  <ellipse cx="100" cy="130" rx="25" ry="15" fill="#636E72" opacity="0.8"/>
+  <rect x="85" y="125" width="30" height="10" rx="5" fill="white" opacity="0.9"/>
+  <path d="M100 145 Q110 155, 120 165" stroke="#636E72" stroke-width="3" fill="none"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="white">BP MONITOR</text>
+</svg>

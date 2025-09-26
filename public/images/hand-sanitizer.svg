@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#00B894"/>
+  <rect x="80" y="50" width="40" height="90" rx="20" fill="white" opacity="0.95"/>
+  <rect x="85" y="55" width="30" height="15" rx="7" fill="#E17055"/>
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="7" font-weight="bold" text-anchor="middle" fill="white">PUMP</text>
+  <rect x="85" y="75" width="30" height="55" fill="#00CEC9"/>
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="7" font-weight="bold" text-anchor="middle" fill="white">HAND</text>
+  <text x="100" y="107" font-family="Arial, sans-serif" font-size="7" font-weight="bold" text-anchor="middle" fill="white">SANITIZER</text>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="white">70% Alcohol</text>
+  <circle cx="100" cy="155" r="8" fill="white" opacity="0.7"/>
+  <circle cx="88" cy="165" r="5" fill="white" opacity="0.5"/>
+  <circle cx="112" cy="162" r="6" fill="white" opacity="0.6"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="white">500ML</text>
+</svg>

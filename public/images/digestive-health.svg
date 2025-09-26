@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#FFEAA7"/>
+  <ellipse cx="100" cy="80" rx="30" ry="25" fill="#FD79A8" opacity="0.8"/>
+  <path d="M100 105 Q120 120, 100 140 Q80 120, 100 105" fill="#FD79A8" opacity="0.8"/>
+  <circle cx="90" cy="90" r="3" fill="white"/>
+  <circle cx="110" cy="85" r="3" fill="white"/>
+  <circle cx="100" cy="125" r="2" fill="white"/>
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">DIGESTIVE</text>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">HEALTH</text>
+</svg>
