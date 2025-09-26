@@ -135,8 +135,8 @@ const ProductCard = ({
         </div>
         
         {/* PRICE AND CART SECTION */}
-        <div className="flex flex-col gap-3 mt-2">
-          <div className="flex items-center justify-between">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div className="flex items-center gap-1 sm:gap-2">
               <span className="text-sm sm:text-base font-semibold text-blue-600">
                 ₹{product.price.toFixed(2)}
@@ -161,24 +161,32 @@ const ProductCard = ({
               }}
               disabled={!product.inStock}
               title="Add to Cart"
-              className={`p-2 rounded-lg flex items-center justify-center min-w-8 min-h-8 transition-colors ${
-                product.inStock 
-                  ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer' 
-                  : 'bg-gray-300 cursor-not-allowed'
-              } text-white`}
+              style={{
+                padding: '8px',
+                backgroundColor: product.inStock ? '#2563eb' : '#d1d5db',
+                color: 'white',
+                border: 'none',
+                borderRadius: '6px',
+                cursor: product.inStock ? 'pointer' : 'not-allowed',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '32px',
+                minHeight: '32px'
+              }}
             >
-              <ShoppingCart className="w-4 h-4" />
+              <ShoppingCart style={{ width: '14px', height: '14px' }} />
             </button>
           </div>
           
           {/* ACTION BUTTONS */}
-          <div className="flex gap-2 w-full mt-2">
+          <div className="flex gap-1 sm:gap-2 w-full mt-2">
             <button
               onClick={() => onViewDetails?.(product)}
               title="View Product Details"
-              className="flex-1 py-2 px-3 text-xs font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-md hover:bg-blue-50 transition-colors min-h-8 flex items-center justify-center"
+              className="flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded sm:rounded-md hover:bg-blue-50 transition-colors min-h-6 sm:min-h-8 flex items-center justify-center"
             >
-              VIEW
+              <span className="text-xs sm:text-sm">VIEW</span>
             </button>
             
             {onBuyNow && (
@@ -186,13 +194,13 @@ const ProductCard = ({
                 onClick={() => onBuyNow?.(product)}
                 disabled={!product.inStock}
                 title="Buy Now - Instant Purchase"
-                className={`flex-1 py-2 px-3 text-xs font-semibold text-white border-none rounded-md transition-colors min-h-8 flex items-center justify-center ${
+                className={`flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-6 sm:min-h-8 flex items-center justify-center ${
                   product.inStock 
                     ? 'bg-green-600 hover:bg-green-700 cursor-pointer' 
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
               >
-                BUY NOW
+                <span className="text-xs sm:text-sm">BUY NOW</span>
               </button>
             )}
           </div>
