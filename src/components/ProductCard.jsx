@@ -184,7 +184,7 @@ const ProductCard = ({
             <button
               onClick={() => onViewDetails?.(product)}
               title="View Product Details"
-              className="flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs sm:text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded sm:rounded-md hover:bg-blue-50 transition-colors min-h-6 sm:min-h-8 flex items-center justify-center"
+              className="flex-1 py-0.5 px-1 sm:py-1.5 sm:px-3 text-xs sm:text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded sm:rounded-md hover:bg-blue-50 transition-colors min-h-5 sm:min-h-7 flex items-center justify-center"
             >
               VIEW
             </button>
@@ -193,14 +193,14 @@ const ProductCard = ({
               <button
                 onClick={() => onBuyNow?.(product)}
                 disabled={!product.inStock}
-                title="Buy Now - Instant Purchase"
-                className={`flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs sm:text-sm font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-6 sm:min-h-8 flex items-center justify-center ${
+                title="Buy - Instant Purchase"
+                className={`flex-1 py-0.5 px-1 sm:py-1.5 sm:px-3 text-xs sm:text-sm font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-5 sm:min-h-7 flex items-center justify-center ${
                   product.inStock 
                     ? 'bg-green-600 hover:bg-green-700 cursor-pointer' 
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
               >
-                BUY NOW
+                BUY
               </button>
             )}
           </div>

@@ -242,7 +242,7 @@ const ProductDetails = () => {
                 onClick={handleAddToCart}
                 disabled={!product.inStock}
                 className="flex-1"
-                size="lg"
+                size="md"
               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
                 {cartItem ? `Update Cart (${cartItem.quantity})` : 'Add to Cart'}
@@ -253,9 +253,9 @@ const ProductDetails = () => {
                 disabled={!product.inStock}
                 variant="outline"
                 className="flex-1"
-                size="lg"
+                size="md"
               >
-                Buy Now
+                Buy
               </Button>
             </div>
 
