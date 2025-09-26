@@ -1,0 +1,48 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f8fafc"/>
+  
+  <!-- Medicine bottle -->
+  <rect x="70" y="40" width="60" height="110" rx="8" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  
+  <!-- Bottle cap -->
+  <rect x="75" y="35" width="50" height="12" rx="6" fill="#1e3a8a"/>
+  
+  <!-- Label background -->
+  <rect x="75" y="55" width="50" height="70" rx="4" fill="#ffffff"/>
+  
+  <!-- Product name -->
+  <text x="100" y="75" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="#2563eb">VITAFOL</text>
+  <text x="100" y="85" font-family="Arial" font-size="6" text-anchor="middle" fill="#2563eb">Multivitamins</text>
+  
+  <!-- Vitamin symbols -->
+  <circle cx="85" cy="100" r="6" fill="#f59e0b"/>
+  <text x="85" y="103" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="white">A</text>
+  
+  <circle cx="100" cy="95" r="6" fill="#dc2626"/>
+  <text x="100" y="98" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="white">B</text>
+  
+  <circle cx="115" cy="100" r="6" fill="#16a34a"/>
+  <text x="115" y="103" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="white">C</text>
+  
+  <circle cx="92" cy="110" r="6" fill="#7c3aed"/>
+  <text x="92" y="113" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="white">D</text>
+  
+  <circle cx="108" cy="110" r="6" fill="#059669"/>
+  <text x="108" y="113" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="white">E</text>
+  
+  <!-- Pills representation -->
+  <ellipse cx="90" cy="135" rx="4" ry="2" fill="#fbbf24"/>
+  <ellipse cx="100" cy="130" rx="4" ry="2" fill="#ef4444"/>
+  <ellipse cx="110" cy="135" rx="4" ry="2" fill="#22c55e"/>
+  
+  <!-- Health plus sign -->
+  <g transform="translate(145,70)">
+    <rect x="-2" y="-6" width="4" height="12" fill="#16a34a"/>
+    <rect x="-6" y="-2" width="12" height="4" fill="#16a34a"/>
+  </g>
+  
+  <!-- Benefits text -->
+  <text x="100" y="170" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Complete Nutrition</text>
+  <text x="100" y="180" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Daily Vitamins</text>
+</svg>

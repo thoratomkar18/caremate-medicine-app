@@ -1,0 +1,51 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#fef7ed"/>
+  
+  <!-- Medicine bottle -->
+  <rect x="70" y="45" width="60" height="105" rx="8" fill="#be185d" stroke="#a21caf" stroke-width="2"/>
+  
+  <!-- Bottle cap -->
+  <rect x="75" y="40" width="50" height="12" rx="6" fill="#831843"/>
+  
+  <!-- Label background -->
+  <rect x="75" y="60" width="50" height="65" rx="4" fill="#ffffff"/>
+  
+  <!-- Product name -->
+  <text x="100" y="78" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="#be185d">PRENATAL</text>
+  <text x="100" y="88" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="#be185d">VITAMINS</text>
+  
+  <!-- Mother and baby silhouette -->
+  <g transform="translate(85,95)">
+    <!-- Mother figure -->
+    <circle cx="0" cy="0" r="4" fill="#be185d"/>
+    <ellipse cx="0" cy="8" rx="5" ry="6" fill="#be185d"/>
+    <!-- Baby in womb -->
+    <circle cx="2" cy="6" r="2" fill="#f472b6"/>
+  </g>
+  
+  <!-- Key vitamins -->
+  <circle cx="85" cy="115" r="4" fill="#f59e0b"/>
+  <text x="85" y="118" font-family="Arial" font-size="4" font-weight="bold" text-anchor="middle" fill="white">FA</text>
+  
+  <circle cx="100" cy="110" r="4" fill="#dc2626"/>
+  <text x="100" y="114" font-family="Arial" font-size="5" font-weight="bold" text-anchor="middle" fill="white">Fe</text>
+  
+  <circle cx="115" cy="115" r="4" fill="#1d4ed8"/>
+  <text x="115" y="119" font-family="Arial" font-size="4" font-weight="bold" text-anchor="middle" fill="white">Ca</text>
+  
+  <!-- Heart for maternal health -->
+  <path d="M 45 110 Q 40 105 35 110 Q 30 105 25 110 Q 30 115 35 120 Q 40 115 45 110 Z" fill="#ec4899"/>
+  
+  <!-- Development symbol -->
+  <g transform="translate(140,105)">
+    <circle cx="0" cy="0" r="3" fill="#16a34a"/>
+    <circle cx="6" cy="-2" r="2" fill="#22c55e"/>
+    <circle cx="6" cy="2" r="2" fill="#22c55e"/>
+    <circle cx="12" cy="0" r="2" fill="#22c55e"/>
+  </g>
+  
+  <!-- Benefits text -->
+  <text x="100" y="170" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Fetal Development</text>
+  <text x="100" y="180" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Maternal Health</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#f8fafc"/>
+  
+  <!-- Medicine bottle -->
+  <rect x="70" y="45" width="60" height="105" rx="8" fill="#ea580c" stroke="#dc2626" stroke-width="2"/>
+  
+  <!-- Bottle cap -->
+  <rect x="75" y="40" width="50" height="12" rx="6" fill="#9a3412"/>
+  
+  <!-- Label background -->
+  <rect x="75" y="60" width="50" height="65" rx="4" fill="#ffffff"/>
+  
+  <!-- Product name -->
+  <text x="100" y="78" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="#ea580c">ZINCOVIT</text>
+  <text x="100" y="88" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="#ea580c">C</text>
+  
+  <!-- Zinc and Vitamin C symbols -->
+  <circle cx="88" cy="105" r="8" fill="#71717a"/>
+  <text x="88" y="109" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="white">Zn</text>
+  
+  <circle cx="112" cy="105" r="8" fill="#f59e0b"/>
+  <text x="112" y="109" font-family="Arial" font-size="7" font-weight="bold" text-anchor="middle" fill="white">C</text>
+  
+  <!-- Immune system representation -->
+  <circle cx="100" cy="115" r="3" fill="#16a34a"/>
+  <circle cx="95" cy="118" r="2" fill="#22c55e"/>
+  <circle cx="105" cy="118" r="2" fill="#22c55e"/>
+  <circle cx="98" cy="122" r="2" fill="#22c55e"/>
+  <circle cx="102" cy="122" r="2" fill="#22c55e"/>
+  
+  <!-- Shield icon for immunity -->
+  <path d="M 40 90 L 40 110 Q 40 120 50 125 L 55 125 Q 65 120 65 110 L 65 90 Z" fill="#16a34a"/>
+  <path d="M 45 95 L 50 100 L 60 90" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Benefits text -->
+  <text x="100" y="170" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Immune Support</text>
+  <text x="100" y="180" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Antioxidant</text>
+</svg>

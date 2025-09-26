@@ -1,0 +1,60 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#fffbeb"/>
+  
+  <!-- Sun rays -->
+  <g transform="translate(150,50)">
+    <path d="M 0 -15 L 0 -25" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M 10.6 -10.6 L 17.7 -17.7" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M 15 0 L 25 0" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M 10.6 10.6 L 17.7 17.7" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M 0 15 L 0 25" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M -10.6 10.6 L -17.7 17.7" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M -15 0 L -25 0" stroke="#f59e0b" stroke-width="3"/>
+    <path d="M -10.6 -10.6 L -17.7 -17.7" stroke="#f59e0b" stroke-width="3"/>
+    <circle cx="0" cy="0" r="12" fill="#fbbf24"/>
+  </g>
+  
+  <!-- Sunscreen tube -->
+  <rect x="70" y="50" width="60" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Tube cap -->
+  <rect x="75" y="40" width="50" height="20" rx="25" fill="#f59e0b"/>
+  
+  <!-- Label background -->
+  <rect x="75" y="70" width="50" height="80" rx="4" fill="#fef3c7"/>
+  
+  <!-- SPF indicator -->
+  <circle cx="100" cy="95" r="15" fill="#f59e0b"/>
+  <text x="100" y="90" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="white">SPF</text>
+  <text x="100" y="102" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="white">50+</text>
+  
+  <!-- Product name -->
+  <text x="100" y="125" font-family="Arial" font-size="6" font-weight="bold" text-anchor="middle" fill="#92400e">SUNSCREEN</text>
+  <text x="100" y="135" font-family="Arial" font-size="5" text-anchor="middle" fill="#92400e">Broad Spectrum</text>
+  
+  <!-- UV protection symbol -->
+  <g transform="translate(40,100)">
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#dc2626" stroke-width="2"/>
+    <path d="M -5 -5 L 5 5" stroke="#dc2626" stroke-width="2"/>
+    <text x="0" y="15" font-family="Arial" font-size="4" text-anchor="middle" fill="#dc2626">UV</text>
+  </g>
+  
+  <!-- Water resistance -->
+  <g transform="translate(140,120)">
+    <path d="M 0 0 Q -3 -5 0 -10 Q 3 -5 0 0" fill="#0891b2"/>
+    <path d="M -5 2 Q -8 -3 -5 -8 Q -2 -3 -5 2" fill="#0891b2"/>
+    <path d="M 5 2 Q 2 -3 5 -8 Q 8 -3 5 2" fill="#0891b2"/>
+  </g>
+  
+  <!-- Skin protection -->
+  <g transform="translate(45,140)">
+    <ellipse cx="0" cy="0" rx="8" ry="10" fill="#fbbf24"/>
+    <rect x="-10" y="-2" width="20" height="4" fill="#16a34a" opacity="0.7"/>
+    <text x="0" y="18" font-family="Arial" font-size="3" text-anchor="middle" fill="#16a34a">PROTECTED</text>
+  </g>
+  
+  <!-- Benefits text -->
+  <text x="100" y="180" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">UV Protection</text>
+  <text x="100" y="190" font-family="Arial" font-size="6" text-anchor="middle" fill="#6b7280">Water Resistant</text>
+</svg>
