@@ -175,7 +175,7 @@ const Home = () => {
           </button>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3" style={{ display: 'grid', gridAutoRows: '1fr' }}>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {(isMobile ? featuredProducts.slice(0, 4) : featuredProducts).map((product, index) => {
             const discountPercentage = product.originalPrice 
               ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
@@ -187,7 +187,6 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                style={{ display: 'flex', height: '100%' }}
                 className="relative"
               >
                 {discountPercentage > 0 && (
@@ -200,7 +199,6 @@ const Home = () => {
                   onAddToCart={handleAddToCart}
                   onViewDetails={handleViewDetails}
                   onBuyNow={handleBuyNow}
-                  className="w-full"
                 />
               </motion.div>
             )
@@ -239,7 +237,7 @@ const Home = () => {
           </button>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3" style={{ display: 'grid', gridAutoRows: '1fr' }}>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {(isMobile ? popularProducts.slice(0, 4) : popularProducts).map((product, index) => {
             const discountPercentage = product.originalPrice 
               ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
@@ -251,7 +249,6 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                style={{ display: 'flex', height: '100%' }}
                 className="relative"
               >
                 {discountPercentage > 0 && (
@@ -264,7 +261,6 @@ const Home = () => {
                   onAddToCart={handleAddToCart}
                   onViewDetails={handleViewDetails}
                   onBuyNow={handleBuyNow}
-                  className="w-full"
                 />
               </motion.div>
             )
