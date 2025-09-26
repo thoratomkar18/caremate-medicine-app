@@ -37,7 +37,7 @@ if (import.meta.env.DEV) {
   worker.start({
     onUnhandledRequest: 'bypass',
     serviceWorker: {
-      url: '/mockServiceWorker.js'
+      url: import.meta.env.DEV ? '/mockServiceWorker.js' : '/caremate-medicine-app/mockServiceWorker.js'
     }
   }).then(() => {
     console.log('🔧 MSW started successfully - Demo login should work!')
@@ -60,7 +60,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <CartProvider>
-          <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <Router basename="/caremate-medicine-app" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <Toaster
               position="top-right"
               toastOptions={{
