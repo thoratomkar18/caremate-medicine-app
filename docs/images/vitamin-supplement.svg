@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#4ECDC4"/>
+  <circle cx="100" cy="70" r="25" fill="white" opacity="0.9"/>
+  <circle cx="100" cy="70" r="20" fill="#FF6B6B"/>
+  <rect x="80" y="110" width="40" height="60" rx="8" fill="white" opacity="0.9"/>
+  <text x="100" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">VITAMIN</text>
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">SUPPLEMENT</text>
+</svg>

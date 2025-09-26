@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#81ECEC"/>
+  <rect x="85" y="50" width="30" height="90" rx="15" fill="white" opacity="0.9"/>
+  <rect x="90" y="55" width="20" height="15" rx="10" fill="#E17055"/>
+  <rect x="90" y="75" width="20" height="55" fill="#74B9FF"/>
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="white">SYRUP</text>
+  <circle cx="100" cy="155" r="8" fill="white" opacity="0.7"/>
+  <circle cx="85" cy="165" r="5" fill="white" opacity="0.5"/>
+  <circle cx="115" cy="162" r="6" fill="white" opacity="0.6"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#333">COUGH & COLD</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#55A3FF"/>
+  <ellipse cx="100" cy="90" rx="40" ry="25" fill="white" opacity="0.9"/>
+  <circle cx="100" cy="90" r="15" fill="#74B9FF"/>
+  <circle cx="100" cy="90" r="8" fill="#333"/>
+  <circle cx="105" cy="85" r="3" fill="white"/>
+  <rect x="85" y="130" width="30" height="40" rx="15" fill="white" opacity="0.9"/>
+  <rect x="90" y="135" width="20" height="8" rx="4" fill="#E17055"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">EYE CARE</text>
+</svg>

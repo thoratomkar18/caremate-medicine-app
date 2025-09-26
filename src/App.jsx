@@ -37,12 +37,26 @@ if (import.meta.env.DEV) {
   worker.start({
     onUnhandledRequest: 'bypass',
     serviceWorker: {
-      url: import.meta.env.DEV ? '/mockServiceWorker.js' : '/caremate-medicine-app/mockServiceWorker.js'
+      url: '/mockServiceWorker.js'
     }
   }).then(() => {
     console.log('🔧 MSW started successfully - Demo login should work!')
   }).catch((error) => {
     console.error('❌ MSW failed to start:', error)
+  })
+} else {
+  // In production, start MSW without service worker
+  console.log('🌍 Running in production mode')
+  worker.start({
+    onUnhandledRequest: 'bypass',
+    serviceWorker: {
+      url: '/caremate-medicine-app/mockServiceWorker.js'
+    }
+  }).then(() => {
+    console.log('🔧 MSW started in production mode')
+  }).catch((error) => {
+    console.warn('⚠️ MSW failed to start in production:', error)
+    console.log('📝 App will continue without MSW in production')
   })
 }
 

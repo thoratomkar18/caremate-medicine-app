@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#00CEC9"/>
+  <rect x="75" y="50" width="50" height="80" rx="25" fill="white" opacity="0.9"/>
+  <rect x="80" y="55" width="40" height="15" rx="7" fill="#E17055"/>
+  <rect x="85" y="75" width="30" height="45" fill="#74B9FF"/>
+  <circle cx="100" cy="140" r="6" fill="white" opacity="0.7"/>
+  <circle cx="90" cy="150" r="4" fill="white" opacity="0.5"/>
+  <circle cx="110" cy="148" r="5" fill="white" opacity="0.6"/>
+  <text x="100" y="175" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">SKIN CARE</text>
+</svg>

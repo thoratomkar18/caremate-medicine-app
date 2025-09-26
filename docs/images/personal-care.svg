@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#00B894"/>
+  <rect x="85" y="50" width="30" height="80" rx="15" fill="white" opacity="0.9"/>
+  <rect x="90" y="55" width="20" height="10" rx="5" fill="#E17055"/>
+  <rect x="90" y="70" width="20" height="50" fill="#00CEC9"/>
+  <circle cx="100" cy="150" r="8" fill="white" opacity="0.7"/>
+  <circle cx="90" cy="160" r="5" fill="white" opacity="0.5"/>
+  <circle cx="110" cy="165" r="6" fill="white" opacity="0.6"/>
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">PERSONAL CARE</text>
+</svg>
