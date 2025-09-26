@@ -135,8 +135,8 @@ const ProductCard = ({
         </div>
         
         {/* PRICE AND CART SECTION */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className="flex flex-col gap-3 mt-2">
+          <div className="flex items-center justify-between">
             <div className="flex items-center gap-1 sm:gap-2">
               <span className="text-sm sm:text-base font-semibold text-blue-600">
                 ₹{product.price.toFixed(2)}
@@ -161,38 +161,22 @@ const ProductCard = ({
               }}
               disabled={!product.inStock}
               title="Add to Cart"
-              style={{
-                padding: '8px',
-                backgroundColor: product.inStock ? '#2563eb' : '#d1d5db',
-                color: 'white',
-                border: 'none',
-                borderRadius: '6px',
-                cursor: product.inStock ? 'pointer' : 'not-allowed',
-                display: 'flex !important',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minWidth: '32px',
-                minHeight: '32px',
-                position: 'relative',
-                zIndex: '10'
-              }}
+              className={`p-2 rounded-lg flex items-center justify-center min-w-8 min-h-8 transition-colors ${
+                product.inStock 
+                  ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer' 
+                  : 'bg-gray-300 cursor-not-allowed'
+              } text-white`}
             >
-              <ShoppingCart style={{ width: '14px', height: '14px' }} />
+              <ShoppingCart className="w-4 h-4" />
             </button>
           </div>
           
           {/* ACTION BUTTONS */}
-          <div style={{ 
-            display: 'flex !important', 
-            gap: '6px', 
-            width: '100%',
-            visibility: 'visible !important',
-            opacity: '1 !important'
-          }}>
+          <div className="flex gap-2 w-full mt-2">
             <button
               onClick={() => onViewDetails?.(product)}
               title="View Product Details"
-              className="flex-1 py-2 px-2 text-xs font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded cursor-pointer text-center min-h-8"
+              className="flex-1 py-2 px-3 text-xs font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-md hover:bg-blue-50 transition-colors min-h-8 flex items-center justify-center"
             >
               VIEW
             </button>
@@ -202,68 +186,15 @@ const ProductCard = ({
                 onClick={() => onBuyNow?.(product)}
                 disabled={!product.inStock}
                 title="Buy Now - Instant Purchase"
-                className={`flex-1 py-2 px-2 text-xs font-semibold text-white border-none rounded text-center min-h-8 ${
+                className={`flex-1 py-2 px-3 text-xs font-semibold text-white border-none rounded-md transition-colors min-h-8 flex items-center justify-center ${
                   product.inStock 
-                    ? 'bg-green-600 cursor-pointer' 
+                    ? 'bg-green-600 hover:bg-green-700 cursor-pointer' 
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
               >
                 BUY NOW
               </button>
             )}
-          </div>
-          
-          {/* EMERGENCY FALLBACK BUTTONS */}
-          <div style={{ 
-            display: 'block !important',
-            backgroundColor: '#f3f4f6',
-            padding: '8px',
-            borderRadius: '6px',
-            fontSize: '10px',
-            textAlign: 'center'
-          }}>
-            <div style={{ display: 'flex', gap: '4px' }}>
-              <input 
-                type="button" 
-                value="ADD TO CART" 
-                onClick={() => {
-                  onAddToCart?.(product)
-                  if (product.inStock) {
-                    toast.success(`Added ${product.name} to cart!`, {
-                      icon: '🛒',
-                      duration: 3000,
-                    })
-                  }
-                }}
-                style={{
-                  flex: 1,
-                  padding: '6px',
-                  backgroundColor: '#2563eb',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '4px',
-                  fontSize: '9px',
-                  cursor: 'pointer'
-                }}
-              />
-              {onBuyNow && (
-                <input 
-                  type="button" 
-                  value="BUY NOW" 
-                  onClick={() => onBuyNow?.(product)}
-                  style={{
-                    flex: 1,
-                    padding: '6px',
-                    backgroundColor: '#16a34a',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    fontSize: '9px',
-                    cursor: 'pointer'
-                  }}
-                />
-              )}
-            </div>
           </div>
         </div>
       </div>
