@@ -194,7 +194,7 @@ const ProductCard = ({
                 onClick={() => onBuyNow?.(product)}
                 disabled={!product.inStock}
                 title="Buy - Instant Purchase"
-                className={`flex-1 py-0.5 px-1 sm:py-1.5 sm:px-3 text-xs sm:text-sm font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-5 sm:min-h-7 flex items-center justify-center ${
+                className={`flex-1 py-0.5 px-1 sm:py-1.5 sm:px-3 text-xs sm:text-sm font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-5 sm:min-h-7 flex items-center justify-center whitespace-nowrap ${
                   product.inStock 
                     ? 'bg-green-600 hover:bg-green-700 cursor-pointer' 
                     : 'bg-gray-300 cursor-not-allowed'
