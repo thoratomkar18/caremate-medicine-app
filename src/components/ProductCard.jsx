@@ -180,13 +180,13 @@ const ProductCard = ({
           </div>
           
           {/* ACTION BUTTONS */}
-          <div className="flex gap-1 sm:gap-2 w-full mt-2">
+          <div className="flex gap-1 sm:gap-2 w-full mt-2 items-stretch">
             <button
               onClick={() => onViewDetails?.(product)}
               title="View Product Details"
-              className="flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded sm:rounded-md hover:bg-blue-50 transition-colors min-h-6 sm:min-h-8 flex items-center justify-center"
+              className="flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs sm:text-sm font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded sm:rounded-md hover:bg-blue-50 transition-colors min-h-6 sm:min-h-8 flex items-center justify-center"
             >
-              <span className="text-xs sm:text-sm">VIEW</span>
+              VIEW
             </button>
             
             {onBuyNow && (
@@ -194,13 +194,13 @@ const ProductCard = ({
                 onClick={() => onBuyNow?.(product)}
                 disabled={!product.inStock}
                 title="Buy Now - Instant Purchase"
-                className={`flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-6 sm:min-h-8 flex items-center justify-center ${
+                className={`flex-1 py-1 px-1 sm:py-2 sm:px-3 text-xs sm:text-sm font-semibold text-white border-none rounded sm:rounded-md transition-colors min-h-6 sm:min-h-8 flex items-center justify-center ${
                   product.inStock 
                     ? 'bg-green-600 hover:bg-green-700 cursor-pointer' 
                     : 'bg-gray-300 cursor-not-allowed'
                 }`}
               >
-                <span className="text-xs sm:text-sm">BUY NOW</span>
+                BUY NOW
               </button>
             )}
           </div>
