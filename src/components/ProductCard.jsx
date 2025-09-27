@@ -85,14 +85,15 @@ const ProductCard = ({
               if (!img.dataset.placeholderSet) {
                 img.dataset.placeholderSet = '1'
                 img.src = 'data:image/svg+xml;base64,' + btoa(`
-                <svg width=\"200\" height=\"200\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\">
-                  <rect width=\"200\" height=\"200\" fill=\"#f3f4f6\"/>
-                  <circle cx=\"100\" cy=\"80\" r=\"25\" fill=\"#9ca3af\"/>
-                  <rect x=\"60\" y=\"120\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#9ca3af\"/>
-                  <text x=\"100\" y=\"170\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#6b7280\">Product Image</text>
+                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" fill="#f3f4f6"/>
+                  <circle cx="100" cy="80" r="25" fill="#9ca3af"/>
+                  <rect x="60" y="120" width="80" height="30" rx="5" fill="#9ca3af"/>
+                  <text x="100" y="170" font-family="Arial" font-size="12" text-anchor="middle" fill="#6b7280">Product Image</text>
                 </svg>
               `)
-              e.target.alt = `${product.name} - Product image`
+                e.target.alt = `${product.name} - Product image`
+              }
             }}
             loading="lazy"
           />
