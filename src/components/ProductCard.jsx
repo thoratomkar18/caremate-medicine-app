@@ -73,15 +73,18 @@ const ProductCard = ({
               backgroundColor: 'white'
             }}
             onError={(e) => {
-              console.log('Image failed to load:', product.name, '=>', product.image)
-              // If an external URL failed, fall back to category default first
-              const fallback = resolveImageSrc(defaultImageFor(product))
-              if (e.target.src !== fallback) {
-                e.target.src = fallback
+              const img = e.currentTarget
+              // First fallback: try category image once
+              if (!img.dataset.fallbackTried) {
+                img.dataset.fallbackTried = '1'
+                const fallback = resolveImageSrc(defaultImageFor(product))
+                img.src = fallback
                 return
               }
-              // Use data URI as final fallback - guaranteed to work offline
-              e.target.src = 'data:image/svg+xml;base64,' + btoa(`
+              // Final fallback: inline placeholder (avoid loops)
+              if (!img.dataset.placeholderSet) {
+                img.dataset.placeholderSet = '1'
+                img.src = 'data:image/svg+xml;base64,' + btoa(`
                 <svg width=\"200\" height=\"200\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\">
                   <rect width=\"200\" height=\"200\" fill=\"#f3f4f6\"/>
                   <circle cx=\"100\" cy=\"80\" r=\"25\" fill=\"#9ca3af\"/>
