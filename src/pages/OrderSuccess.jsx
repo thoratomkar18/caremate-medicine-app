@@ -48,7 +48,7 @@ const OrderSuccess = () => {
         <div className="text-center">
           <Package className="w-16 h-16 text-error-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-muted-900 mb-2">Order not found</h2>
-          <p className="text-muted-600 mb-6">The order you're looking for doesn't exist.</p>
+          <p className="text-muted-600 mb-6">The order you&apos;re looking for doesn&apos;t exist.</p>
           <Button onClick={() => navigate('/orders')}>
             View All Orders
           </Button>
@@ -73,7 +73,7 @@ const OrderSuccess = () => {
           Order Placed Successfully!
         </h1>
         <p className="text-muted-600 text-lg">
-          Thank you for your order. We'll send you updates on your order status.
+          Thank you for your order. We&apos;ll send you updates on your order status.
         </p>
       </motion.div>
 
@@ -204,11 +204,11 @@ const OrderSuccess = () => {
         <div className="space-y-2 text-sm text-primary-800">
           <div className="flex items-center">
             <ArrowRight className="w-4 h-4 mr-2" />
-            <span>We'll confirm your order and start preparing it</span>
+            <span>We&apos;ll confirm your order and start preparing it</span>
           </div>
           <div className="flex items-center">
             <ArrowRight className="w-4 h-4 mr-2" />
-            <span>You'll receive SMS and email updates on order progress</span>
+            <span>You&apos;ll receive SMS and email updates on order progress</span>
           </div>
           <div className="flex items-center">
             <ArrowRight className="w-4 h-4 mr-2" />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { 
   ArrowLeft, 
   ShoppingCart, 
@@ -27,7 +27,7 @@ const ProductDetails = () => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [isWishlisted, setIsWishlisted] = useState(false)
 
-  const { addToCart, isInCart, getCartItem } = useCart()
+  const { addToCart, getCartItem } = useCart()
 
   const { data: product, isLoading, error } = useQuery({
     queryKey: ['product', id],
@@ -84,7 +84,7 @@ const ProductDetails = () => {
         <div className="text-center">
           <AlertCircle className="w-16 h-16 text-error-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-muted-900 mb-2">Product not found</h2>
-          <p className="text-muted-600 mb-6">The product you're looking for doesn't exist.</p>
+          <p className="text-muted-600 mb-6">The product you&apos;re looking for doesn&apos;t exist.</p>
           <Button onClick={() => navigate('/products')}>
             Browse Products
           </Button>

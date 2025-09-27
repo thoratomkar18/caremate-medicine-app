@@ -7,7 +7,6 @@ import {
   ShoppingCart, 
   User, 
   Menu, 
-  Bell,
   ChevronDown
 } from 'lucide-react'
 
@@ -29,44 +28,44 @@ const Header = ({
   }
 
   return (
-    <header className="bg-white shadow-md border-b border-muted-200 sticky top-0 z-30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-30 bg-white border-b shadow-md border-muted-200">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Single Line Header */}
         <div className="flex items-center h-16">
           {/* Logo Section */}
           <div className="flex items-center flex-shrink-0 mr-8">
             <button
               onClick={onMenuClick}
-              className="lg:hidden p-2 hover:bg-muted-100 rounded-lg transition-colors mr-2"
+              className="p-2 mr-2 transition-colors rounded-lg lg:hidden hover:bg-muted-100"
             >
               <Menu className="w-6 h-6 text-muted-600" />
             </button>
             
-            <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
+            <Link to="/" className="flex items-center space-x-2 transition-opacity hover:opacity-80">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-600">
+                <span className="text-lg font-bold text-white">C</span>
               </div>
-              <h1 className="text-lg font-bold text-primary-600 hidden sm:block">
+              <h1 className="hidden text-lg font-bold text-primary-600 sm:block">
                 CareMate
               </h1>
             </Link>
           </div>
 
           {/* Category Links - Desktop Only */}
-          <div className="hidden lg:flex items-center space-x-6 flex-shrink-0 mr-6">
-            <Link to="/categories" className="text-sm text-muted-600 hover:text-primary-600 transition-colors whitespace-nowrap">
+          <div className="items-center flex-shrink-0 hidden mr-6 space-x-6 lg:flex">
+            <Link to="/categories" className="text-sm transition-colors text-muted-600 hover:text-primary-600 whitespace-nowrap">
               All Categories
             </Link>
-            <Link to="/prescription-medicines" className="text-sm text-muted-600 hover:text-primary-600 transition-colors whitespace-nowrap">
+            <Link to="/prescription-medicines" className="text-sm transition-colors text-muted-600 hover:text-primary-600 whitespace-nowrap">
               Prescription Medicines
             </Link>
-            <Link to="/health-devices" className="text-sm text-muted-600 hover:text-primary-600 transition-colors whitespace-nowrap">
+            <Link to="/health-devices" className="text-sm transition-colors text-muted-600 hover:text-primary-600 whitespace-nowrap">
               Health Devices
             </Link>
-            <Link to="/personal-care" className="text-sm text-muted-600 hover:text-primary-600 transition-colors whitespace-nowrap">
+            <Link to="/personal-care" className="text-sm transition-colors text-muted-600 hover:text-primary-600 whitespace-nowrap">
               Personal Care
             </Link>
-            <Link to="/offers" className="text-sm text-muted-600 hover:text-primary-600 transition-colors whitespace-nowrap">
+            <Link to="/offers" className="text-sm transition-colors text-muted-600 hover:text-primary-600 whitespace-nowrap">
               Offers
             </Link>
           </div>
@@ -81,17 +80,17 @@ const Header = ({
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2.5 border border-muted-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm bg-white shadow-sm"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-400" />
+              <Search className="absolute w-4 h-4 transform -translate-y-1/2 left-3 top-1/2 text-muted-400" />
             </form>
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center space-x-4 flex-shrink-0 ml-4">
+          <div className="flex items-center flex-shrink-0 ml-4 space-x-4">
             {/* Location - Hidden on smaller screens */}
             <div className="relative hidden xl:block">
               <button
                 onClick={() => setShowLocationDropdown(!showLocationDropdown)}
-                className="flex items-center space-x-1 p-2 hover:bg-muted-100 rounded-lg transition-colors"
+                className="flex items-center p-2 space-x-1 transition-colors rounded-lg hover:bg-muted-100"
               >
                 <MapPin className="w-4 h-4 text-muted-600" />
                 <span className="text-xs text-muted-900">
@@ -104,17 +103,17 @@ const Header = ({
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="absolute right-0 mt-2 w-64 bg-white border border-muted-200 rounded-lg shadow-lg z-50"
+                  className="absolute right-0 z-50 w-64 mt-2 bg-white border rounded-lg shadow-lg border-muted-200"
                 >
                   <div className="p-3">
-                    <h4 className="font-medium text-muted-900 mb-2">Select Location</h4>
+                    <h4 className="mb-2 font-medium text-muted-900">Select Location</h4>
                     <div className="space-y-2">
-                      <div className="p-2 hover:bg-muted-50 rounded cursor-pointer">
-                        <div className="font-medium text-sm">Wagholi, Pune</div>
+                      <div className="p-2 rounded cursor-pointer hover:bg-muted-50">
+                        <div className="text-sm font-medium">Wagholi, Pune</div>
                         <div className="text-xs text-muted-500">Default</div>
                       </div>
-                      <div className="p-2 hover:bg-muted-50 rounded cursor-pointer">
-                        <div className="font-medium text-sm">Hinjewadi, Pune</div>
+                      <div className="p-2 rounded cursor-pointer hover:bg-muted-50">
+                        <div className="text-sm font-medium">Hinjewadi, Pune</div>
                         <div className="text-xs text-muted-500">Office</div>
                       </div>
                     </div>
@@ -126,14 +125,14 @@ const Header = ({
             {/* Cart */}
             <button
               onClick={onCartClick}
-              className="relative p-2 hover:bg-muted-100 rounded-lg transition-colors"
+              className="relative p-2 transition-colors rounded-lg hover:bg-muted-100"
             >
               <ShoppingCart className="w-5 h-5 text-muted-600" />
               {cartItemCount > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  className="absolute -top-1 -right-1 bg-primary-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+                  className="absolute flex items-center justify-center w-5 h-5 text-xs text-white rounded-full -top-1 -right-1 bg-primary-600"
                 >
                   {cartItemCount}
                 </motion.span>
@@ -141,18 +140,18 @@ const Header = ({
             </button>
 
             {/* Desktop Sign In/Up */}
-            <div className="hidden lg:flex items-center space-x-3">
+            <div className="items-center hidden space-x-3 lg:flex">
               {!user ? (
                 <>
                   <Link
                     to="/login" 
-                    className="text-sm text-muted-700 hover:text-primary-600 transition-colors font-medium whitespace-nowrap px-2"
+                    className="px-2 text-sm font-medium transition-colors text-muted-700 hover:text-primary-600 whitespace-nowrap"
                   >
                     Sign In
                   </Link>
                   <Link
                     to="/signup" 
-                    className="text-sm text-primary-600 hover:text-primary-700 transition-colors font-medium whitespace-nowrap px-3 py-2 border border-primary-600 rounded-lg hover:bg-primary-50"
+                    className="px-3 py-2 text-sm font-medium transition-colors border rounded-lg text-primary-600 hover:text-primary-700 whitespace-nowrap border-primary-600 hover:bg-primary-50"
                   >
                     Sign Up
                   </Link>
@@ -164,7 +163,7 @@ const Header = ({
                   </span>
                   <button
                     onClick={onProfileClick}
-                    className="flex items-center space-x-1 px-3 py-2 border border-primary-300 text-primary-600 rounded-lg hover:bg-primary-50 transition-colors"
+                    className="flex items-center px-3 py-2 space-x-1 transition-colors border rounded-lg border-primary-300 text-primary-600 hover:bg-primary-50"
                   >
                     <User className="w-4 h-4" />
                     <span className="text-sm font-medium">Profile</span>
@@ -176,9 +175,9 @@ const Header = ({
             {/* Mobile Profile */}
             <button
               onClick={onProfileClick}
-              className="lg:hidden flex items-center space-x-2 p-2 hover:bg-primary-50 rounded-lg transition-colors border border-primary-200"
+              className="flex items-center p-2 space-x-2 transition-colors border rounded-lg lg:hidden hover:bg-primary-50 border-primary-200"
             >
-              <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100">
                 <User className="w-4 h-4 text-primary-600" />
               </div>
               <span className="text-sm font-medium text-primary-700">

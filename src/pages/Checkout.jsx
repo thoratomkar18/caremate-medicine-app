@@ -32,7 +32,6 @@ const Checkout = () => {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
     watch
   } = useForm({
     defaultValues: {

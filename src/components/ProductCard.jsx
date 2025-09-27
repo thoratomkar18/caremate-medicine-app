@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ShoppingCart, Heart, Star, Zap, CheckCircle } from 'lucide-react'
+import { ShoppingCart, Heart, Star } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 // Resolve image src to support:
@@ -37,9 +37,10 @@ const ProductCard = ({
   onBuyNow,
   className = '' 
 }) => {
-  const discountPercentage = product.originalPrice 
-    ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
-    : 0
+  // Calculate discount percentage if needed
+  // const discountPercentage = product.originalPrice 
+  //   ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+  //   : 0
 
   const imgSrc = resolveImageSrc(product.image || defaultImageFor(product))
 
@@ -52,7 +53,7 @@ const ProductCard = ({
     >
       <div className="relative">
         <div 
-          className="bg-muted-100 rounded-lg mb-3 overflow-hidden" 
+          className="mb-3 overflow-hidden rounded-lg bg-muted-100" 
           style={{ 
             height: '120px',
             width: '100%',
@@ -142,7 +143,7 @@ const ProductCard = ({
       <div style={{ flex: '1', display: 'flex', flexDirection: 'column', padding: '0 2px' }}>
         {/* Product Info - Fixed Height */}
         <div style={{ minHeight: '42px', marginBottom: '4px' }}>
-          <h3 className="text-xs sm:text-sm font-medium text-gray-900 leading-tight mb-1" style={{ 
+          <h3 className="mb-1 text-xs font-medium leading-tight text-gray-900 sm:text-sm" style={{ 
             display: '-webkit-box',
             WebkitLineClamp: '2',
             WebkitBoxOrient: 'vertical',
@@ -163,7 +164,7 @@ const ProductCard = ({
         <div className="flex items-center gap-1 mb-2" style={{ minHeight: '16px' }}>
           <div className="flex items-center">
             <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-yellow-400 fill-current" />
-            <span className="text-xs font-medium text-gray-900 ml-1">
+            <span className="ml-1 text-xs font-medium text-gray-900">
               {product.rating}
             </span>
           </div>
@@ -176,7 +177,7 @@ const ProductCard = ({
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div className="flex items-center gap-1 sm:gap-2">
-              <span className="text-sm sm:text-base font-semibold text-blue-600">
+              <span className="text-sm font-semibold text-blue-600 sm:text-base">
                 ₹{product.price.toFixed(2)}
               </span>
               {product.originalPrice && (
@@ -218,7 +219,7 @@ const ProductCard = ({
           </div>
           
           {/* ACTION BUTTONS */}
-          <div className="flex gap-1 sm:gap-2 w-full mt-2 items-stretch">
+          <div className="flex items-stretch w-full gap-1 mt-2 sm:gap-2">
             <button
               onClick={() => onViewDetails?.(product)}
               title="View Product Details"

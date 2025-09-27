@@ -8,8 +8,7 @@ import {
   Clock, 
   AlertTriangle,
   Camera,
-  Upload,
-  Check
+  Upload
 } from 'lucide-react'
 import { apiClient } from '../services/api'
 import ProductCard from '../components/ProductCard'

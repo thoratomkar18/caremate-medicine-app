@@ -58,7 +58,7 @@ const Profile = () => {
     setEditingAddress(address)
   }
 
-  const handleAddressSave = (addressId) => {
+  const handleAddressSave = () => {
     // Save address logic would go here
     setEditingAddress(null)
   }

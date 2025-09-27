@@ -162,7 +162,7 @@ const AllCategories = () => {
         transition={{ delay: 0.4 }}
         className="mt-12 bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-white text-center"
       >
-        <h2 className="text-2xl font-bold mb-4">Can't Find What You're Looking For?</h2>
+        <h2 className="text-2xl font-bold mb-4">Can&apos;t Find What You&apos;re Looking For?</h2>
         <p className="text-lg opacity-90 mb-6">
           Contact our pharmacy experts for personalized assistance
         </p>

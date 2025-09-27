@@ -631,6 +631,7 @@ export const handlers = [
   }),
 
   http.get('/api/categories', () => {
+    console.log('🎯 MSW: /api/categories handler called')
     return HttpResponse.json(categories)
   }),
 
@@ -707,6 +708,7 @@ export const handlers = [
 
   http.post('/api/auth/signup', async ({ request }) => {
     try {
+      console.log('🎯 MSW: /api/auth/signup handler called')
       const userData = await request.json()
       console.log('MSW: Signup attempt with:', userData)
       

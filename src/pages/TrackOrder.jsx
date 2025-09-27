@@ -82,18 +82,18 @@ const TrackOrder = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+        <div className="w-8 h-8 border-b-2 rounded-full animate-spin border-primary-600"></div>
       </div>
     )
   }
 
   if (error || !order) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <Package className="w-16 h-16 text-error-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-muted-900 mb-2">Order not found</h2>
-          <p className="text-muted-600 mb-6">The order you're looking for doesn't exist.</p>
+          <Package className="w-16 h-16 mx-auto mb-4 text-error-500" />
+          <h2 className="mb-2 text-2xl font-bold text-muted-900">Order not found</h2>
+          <p className="mb-6 text-muted-600">The order you&apos;re looking for doesn&apos;t exist.</p>
           <Button onClick={() => navigate('/orders')}>
             View All Orders
           </Button>
@@ -105,12 +105,12 @@ const TrackOrder = () => {
   const currentStatusIndex = getCurrentStatusIndex()
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="flex items-center space-x-4 mb-8">
+      <div className="flex items-center mb-8 space-x-4">
         <button
           onClick={() => navigate('/orders')}
-          className="flex items-center space-x-2 text-muted-600 hover:text-primary-600 transition-colors"
+          className="flex items-center space-x-2 transition-colors text-muted-600 hover:text-primary-600"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Orders</span>
@@ -121,11 +121,11 @@ const TrackOrder = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         {/* Order Details */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="space-y-6 lg:col-span-2">
           {/* Order Status */}
-          <div className="bg-white rounded-xl border border-muted-200 p-6">
+          <div className="p-6 bg-white border rounded-xl border-muted-200">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-muted-900">Order Status</h2>
               <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(order.status, true)}`}>
@@ -157,13 +157,13 @@ const TrackOrder = () => {
                       {getStatusIcon(timelineItem.status)}
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-medium text-muted-900 capitalize">
+                      <h4 className="font-medium capitalize text-muted-900">
                         {timelineItem.status.replace('_', ' ')}
                       </h4>
-                      <p className="text-sm text-muted-600 mt-1">
+                      <p className="mt-1 text-sm text-muted-600">
                         {timelineItem.message}
                       </p>
-                      <p className="text-xs text-muted-500 mt-2">
+                      <p className="mt-2 text-xs text-muted-500">
                         {formatDate(timelineItem.date)}
                       </p>
                     </div>
@@ -174,12 +174,12 @@ const TrackOrder = () => {
           </div>
 
           {/* Order Items */}
-          <div className="bg-white rounded-xl border border-muted-200 p-6">
-            <h2 className="text-lg font-semibold text-muted-900 mb-6">Order Items</h2>
+          <div className="p-6 bg-white border rounded-xl border-muted-200">
+            <h2 className="mb-6 text-lg font-semibold text-muted-900">Order Items</h2>
             <div className="space-y-4">
               {order.items.map((item, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 bg-muted-50 rounded-lg">
-                  <div className="w-16 h-16 bg-muted-200 rounded-lg"></div>
+                <div key={index} className="flex items-center p-4 space-x-4 rounded-lg bg-muted-50">
+                  <div className="w-16 h-16 rounded-lg bg-muted-200"></div>
                   <div className="flex-1">
                     <h4 className="font-medium text-muted-900">{item.name}</h4>
                     <p className="text-sm text-muted-600">
@@ -203,8 +203,8 @@ const TrackOrder = () => {
         {/* Order Summary */}
         <div className="space-y-6">
           {/* Order Info */}
-          <div className="bg-white rounded-xl border border-muted-200 p-6">
-            <h2 className="text-lg font-semibold text-muted-900 mb-4">Order Information</h2>
+          <div className="p-6 bg-white border rounded-xl border-muted-200">
+            <h2 className="mb-4 text-lg font-semibold text-muted-900">Order Information</h2>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Calendar className="w-4 h-4 text-muted-500" />
@@ -224,11 +224,11 @@ const TrackOrder = () => {
           </div>
 
           {/* Delivery Address */}
-          <div className="bg-white rounded-xl border border-muted-200 p-6">
-            <h2 className="text-lg font-semibold text-muted-900 mb-4">Delivery Address</h2>
+          <div className="p-6 bg-white border rounded-xl border-muted-200">
+            <h2 className="mb-4 text-lg font-semibold text-muted-900">Delivery Address</h2>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-muted-500 mt-1" />
+                <MapPin className="w-4 h-4 mt-1 text-muted-500" />
                 <div>
                   <p className="font-medium text-muted-900">{order.deliveryAddress.type}</p>
                   <p className="text-sm text-muted-600">
@@ -245,8 +245,8 @@ const TrackOrder = () => {
           </div>
 
           {/* Order Summary */}
-          <div className="bg-white rounded-xl border border-muted-200 p-6">
-            <h2 className="text-lg font-semibold text-muted-900 mb-4">Order Summary</h2>
+          <div className="p-6 bg-white border rounded-xl border-muted-200">
+            <h2 className="mb-4 text-lg font-semibold text-muted-900">Order Summary</h2>
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-600">Items ({order.items.length})</span>
@@ -256,7 +256,7 @@ const TrackOrder = () => {
                 <span className="text-muted-600">Delivery</span>
                 <span className="text-muted-900">Free</span>
               </div>
-              <div className="border-t border-muted-200 pt-3">
+              <div className="pt-3 border-t border-muted-200">
                 <div className="flex justify-between font-semibold">
                   <span>Total</span>
                   <span>₹{order.total.toFixed(2)}</span>

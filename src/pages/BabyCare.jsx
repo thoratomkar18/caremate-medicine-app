@@ -15,7 +15,7 @@ const BabyCare = () => {
       >
         <h1 className="text-3xl font-bold text-muted-900 mb-2">Baby Care</h1>
         <p className="text-muted-600">
-          Everything you need for your little one's health and wellness
+          Everything you need for your little one&apos;s health and wellness
         </p>
       </motion.div>
 
@@ -50,7 +50,7 @@ const BabyCare = () => {
       >
         <h2 className="text-2xl font-bold text-muted-900 mb-4">Coming Soon!</h2>
         <p className="text-muted-600 mb-6">
-          We're carefully curating the best baby care products for your little ones.
+          We&apos;re carefully curating the best baby care products for your little ones.
         </p>
         <button
           onClick={() => navigate('/help')}

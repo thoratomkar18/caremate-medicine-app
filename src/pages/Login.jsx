@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
-import { Mail, Lock, Eye, EyeOff, Loader2 } from 'lucide-react'
-import Button from '../components/Button'
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
 import Input from '../components/Input'
 import { useAuth } from '../hooks/useAuth'
 
@@ -199,7 +198,7 @@ const Login = () => {
           </div>
 
           <p className="text-center text-sm text-muted-600">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link
               to="/signup"
               className="font-medium text-primary-600 hover:text-primary-700"

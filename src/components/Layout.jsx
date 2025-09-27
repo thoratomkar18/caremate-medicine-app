@@ -9,8 +9,8 @@ import { useAuth } from '../hooks/useAuth'
 const Layout = () => {
   const navigate = useNavigate()
   const [isCartOpen, setIsCartOpen] = useState(false)
-  const { cartItems, updateQuantity, removeFromCart, getCartTotal } = useCart()
-  const { user, logout } = useAuth()
+  const { cartItems, updateQuantity, removeFromCart } = useCart()
+  const { user } = useAuth()
 
   const handleCartClick = () => {
     console.log('Cart clicked, opening drawer')

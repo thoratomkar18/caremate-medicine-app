@@ -11,12 +11,10 @@ import {
   ChevronRight,
   FileText,
   CreditCard,
-  Truck,
   Package,
   User,
   Shield
 } from 'lucide-react'
-import Button from '../components/Button'
 
 const Help = () => {
   const [searchQuery, setSearchQuery] = useState('')

@@ -32,33 +32,34 @@ import Offers from './pages/Offers'
 import Layout from './components/Layout'
 import ProtectedRoute from './components/ProtectedRoute'
 
-// Start MSW in development
-if (import.meta.env.DEV) {
-  worker.start({
-    onUnhandledRequest: 'bypass',
-    serviceWorker: {
-      url: '/mockServiceWorker.js'
-    }
-  }).then(() => {
+// Start MSW
+const startMSW = async () => {
+  try {
+    console.log('🚀 Starting MSW...')
+    await worker.start({
+      onUnhandledRequest: 'bypass',
+      serviceWorker: {
+        url: '/caremate-medicine-app/mockServiceWorker.js'
+      }
+    })
     console.log('🔧 MSW started successfully - Demo login should work!')
-  }).catch((error) => {
-    console.error('❌ MSW failed to start:', error)
-  })
-} else {
-  // In production, start MSW without service worker
-  console.log('🌍 Running in production mode')
-  worker.start({
-    onUnhandledRequest: 'bypass',
-    serviceWorker: {
-      url: '/caremate-medicine-app/mockServiceWorker.js'
+    
+    // Test MSW is working
+    try {
+      const response = await fetch('/api/categories')
+      const data = await response.json()
+      console.log('✅ MSW test successful:', data)
+    } catch (testError) {
+      console.error('❌ MSW test failed:', testError)
     }
-  }).then(() => {
-    console.log('🔧 MSW started in production mode')
-  }).catch((error) => {
-    console.warn('⚠️ MSW failed to start in production:', error)
-    console.log('📝 App will continue without MSW in production')
-  })
+  } catch (error) {
+    console.error('❌ MSW failed to start:', error)
+    console.log('📝 App will continue without MSW')
+  }
 }
+
+// Start MSW immediately
+startMSW()
 
 const queryClient = new QueryClient({
   defaultOptions: {
