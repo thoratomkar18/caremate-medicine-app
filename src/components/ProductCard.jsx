@@ -3,6 +3,32 @@ import { motion } from 'framer-motion'
 import { ShoppingCart, Heart, Star, Zap, CheckCircle } from 'lucide-react'
 import toast from 'react-hot-toast'
 
+// Resolve image src to support:
+// - External absolute URLs (https, http, data, blob)
+// - Local public/ images with Vite base (GitHub Pages)
+const resolveImageSrc = (src) => {
+  if (!src) return ''
+  if (/^(https?:|data:|blob:)/i.test(src)) return src
+  const base = (import.meta.env && import.meta.env.BASE_URL) ? import.meta.env.BASE_URL : '/'
+  const normalized = src.replace(/^\//, '')
+  return `${base}${normalized}`
+}
+
+// Category-based default images when product.image is empty
+const defaultImageFor = (product) => {
+  const c = (product?.category || '').toLowerCase()
+  if (c.includes('digestive')) return 'images/digestive-health.svg'
+  if (c.includes('medical')) return 'images/medical-device.svg'
+  if (c.includes('pain')) return 'images/pain-relief.svg'
+  if (c.includes('baby')) return 'images/baby-care.svg'
+  if (c.includes('personal')) return 'images/personal-care.svg'
+  if (c.includes('eye')) return 'images/eye-care.svg'
+  if (c.includes('cough') || c.includes('cold')) return 'images/cough-cold.svg'
+  if (c.includes('first')) return 'images/first-aid.svg'
+  if (c.includes('skin')) return 'images/skin-care.svg'
+  return 'images/vitamin-supplement.svg'
+}
+
 const ProductCard = ({ 
   product, 
   onAddToCart, 
@@ -14,6 +40,8 @@ const ProductCard = ({
   const discountPercentage = product.originalPrice 
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0
+
+  const imgSrc = resolveImageSrc(product.image || defaultImageFor(product))
 
   return (
     <motion.div
@@ -34,7 +62,7 @@ const ProductCard = ({
           }}
         >
           <img
-            src={product.image}
+            src={imgSrc}
             alt={product.name}
             style={{ 
               width: '100%', 
@@ -45,14 +73,20 @@ const ProductCard = ({
               backgroundColor: 'white'
             }}
             onError={(e) => {
-              console.log('Image failed to load:', product.name)
-              // Use data URI as fallback - guaranteed to work offline
+              console.log('Image failed to load:', product.name, '=>', product.image)
+              // If an external URL failed, fall back to category default first
+              const fallback = resolveImageSrc(defaultImageFor(product))
+              if (e.target.src !== fallback) {
+                e.target.src = fallback
+                return
+              }
+              // Use data URI as final fallback - guaranteed to work offline
               e.target.src = 'data:image/svg+xml;base64,' + btoa(`
-                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="200" height="200" fill="#f3f4f6"/>
-                  <circle cx="100" cy="80" r="25" fill="#9ca3af"/>
-                  <rect x="60" y="120" width="80" height="30" rx="5" fill="#9ca3af"/>
-                  <text x="100" y="170" font-family="Arial" font-size="12" text-anchor="middle" fill="#6b7280">Product Image</text>
+                <svg width=\"200\" height=\"200\" viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\">
+                  <rect width=\"200\" height=\"200\" fill=\"#f3f4f6\"/>
+                  <circle cx=\"100\" cy=\"80\" r=\"25\" fill=\"#9ca3af\"/>
+                  <rect x=\"60\" y=\"120\" width=\"80\" height=\"30\" rx=\"5\" fill=\"#9ca3af\"/>
+                  <text x=\"100\" y=\"170\" font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" fill=\"#6b7280\">Product Image</text>
                 </svg>
               `)
               e.target.alt = `${product.name} - Product image`
