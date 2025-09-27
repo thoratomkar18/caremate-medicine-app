@@ -8,6 +8,7 @@ const products = [
     price: 50.13,
     originalPrice: 65.00,
     category: 'Vitamins & Supplements',
+    image: 'https://images.apollo247.in/pub/media/catalog/product/b/i/bio0146.jpg?tr=w-264,q-80,f-webp,dpr-1,c-at_max',
     image: '/images/biofer-f-specific.svg',
     description: 'Iron supplement for improved hemoglobin levels',
     inStock: true,
@@ -532,8 +533,8 @@ const popularProducts = products.filter(p => p.rating > 4.3)
 
 const sampleUser = {
   id: 1,
-  name: 'Rushikesh Kusmade',
-  email: 'rushikesh@example.com',
+  name: 'Omkar Thorat',
+  email: 'Omkar@example.com',
   phone: '+91 77158 15914',
   addresses: [
     {
