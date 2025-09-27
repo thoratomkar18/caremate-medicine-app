@@ -9,7 +9,7 @@ const products = [
     originalPrice: 65.00,
     category: 'Vitamins & Supplements',
     image: 'https://images.apollo247.in/pub/media/catalog/product/b/i/bio0146.jpg?tr=w-264,q-80,f-webp,dpr-1,c-at_max',
-    image: '/images/biofer-f-specific.svg',
+    // image: '/images/biofer-f-specific.svg',
     description: 'Iron supplement for improved hemoglobin levels',
     inStock: true,
     rating: 4.5,
